@@ -45,3 +45,21 @@ function updateEmployeeCards() {
 }
 updateEmployeeCards();
 
+//Task 4 - Employee Card Removal with Event Bubbling
+
+document.getElementById("employeeContainer").addEventListener("click", function () {
+    console.log("An employee card was clicked!");
+});
+
+function removeEmployeeCard(event) {
+    event.stopPropagation(); // Prevent bubbling to the container
+    event.target.parentElement.remove(); // Remove the clicked card
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".employee-card button").forEach(button => {
+        button.addEventListener("click", removeEmployeeCard);
+    });
+});
+
+
