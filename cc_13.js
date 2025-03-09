@@ -35,7 +35,7 @@ createEmployeeCard("Benny", "Tester");
 createEmployeeCard("Jimmy", "Diagnostics");
 createEmployeeCard("Ryan", "Manager");
 })
-//Task 3 
+//Task 3 - Bulk Update on Employee Cards
 
 function updateEmployeeCards() {
     const employeeCards = document.querySelectorAll(".employee-card");
