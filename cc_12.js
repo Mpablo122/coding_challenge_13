@@ -32,3 +32,14 @@ function createEmployeeCard(name, position) {
 createEmployeeCard("Benny", "Tester");
 createEmployeeCard("Jimmy", "Diagnostics");
 createEmployeeCard("Ryan", "Manager");
+
+//Task 3 
+
+function updateEmployeeCards() {
+    const employeeCards = document.querySelectorAll(".employee-card");
+    Array.from(employeeCards).forEach(card => {
+        card.classList.add("highlight"); // Add a highlight class
+    });
+}
+updateEmployeeCards();
+
