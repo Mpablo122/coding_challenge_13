@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Business Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .metric-card {
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .product-item {
+            cursor: pointer;
+            color: blue;
+        }
+        .customer-card {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #dashboard, #inventoryList, #customerSection, #employeeContainer {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Interactive Business Dashboard</h1>
+    </header>
+    
+    <main>
+        <!-- Dashboard Metrics Section -->
+        <section>
+            <h2>Dashboard Metrics</h2>
+            <div id="dashboard"></div>
+        </section>
+
+        <!-- Inventory List Section -->
+        <section>
+            <h2>Inventory List</h2>
+            <ul id="inventoryList"></ul>
+            <button onclick="addInventoryItem('Laptop')">Add Laptop</button>
+            <button onclick="addInventoryItem('Smartphone')">Add Smartphone</button>
+        </section>
+        
+        <!-- Customer Section -->
+        <section>
+            <h2>Customer Section</h2>
+            <div id="customerSection"></div>
+        </section>
+        
+        <!-- Employee Section -->
+        <section>
+            <h2>Employee Section</h2>
+            <div id="employeeContainer"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Business Dashboard. All rights reserved.</p>
+    </footer>
+    
+    <!-- Link to JavaScript File -->
+    <script src="cc_12.js"></script>
+</body>
+</html>
