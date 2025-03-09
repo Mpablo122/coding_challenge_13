@@ -62,4 +62,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//Task 5 - Inline Editing for Employee Cards
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("employeeContainer").addEventListener("click", function (event) {
+        if (event.target.classList.contains("edit-button")) {
+            enableEditing(event.target.parentElement);
+        }
+    });
+});
+
+function enableEditing(card) {
+    const nameElement = card.querySelector(".employee-name");
+    const positionElement = card.querySelector(".employee-position");
+
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.value = nameElement.textContent;
+
+    const positionInput = document.createElement("input");
+    positionInput.type = "text";
+    positionInput.value = positionElement.textContent;
+
+    const saveButton = document.createElement("button");
+    saveButton.textContent = "Save";
+    saveButton.classList.add("save-button");
+    
+
+    card.innerHTML = "";
+    card.appendChild(nameInput);
+    card.appendChild(positionInput);
+    card.appendChild(saveButton);
+
+
+    saveButton.addEventListener("click", () => {
+        nameElement.textContent = nameInput.value;
+        positionElement.textContent = positionInput.value;
+
+        
+        card.innerHTML = "";
+        card.appendChild(nameElement);
+        card.appendChild(positionElement);
+        
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.classList.add("edit-button");
+        card.appendChild(editButton);
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.classList.add("remove-button");
+        removeButton.addEventListener("click", () => card.remove());
+        card.appendChild(removeButton);
+    });
+}
 
