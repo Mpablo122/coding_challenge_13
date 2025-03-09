@@ -19,11 +19,20 @@ function createEmployeeCard(name, position) {
     removeButton.textContent = "Remove";
     removeButton.classList.add("remove-btn");
 
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.classList.add("edit-btn");
+
     removeButton.addEventListener("click", function () {
         container.removeChild(card);
     });
 
+    editButton.addEventListener("click", function () {
+        container.enableEditing(card);
+    });
+
     buttonContainer.appendChild(removeButton);
+    buttonContainer.appendChild(editButton);
     card.appendChild(nameHeading);
     card.appendChild(positionPara);
     card.appendChild(buttonContainer);
@@ -52,8 +61,8 @@ document.getElementById("employeeContainer").addEventListener("click", function 
 });
 
 function removeEmployeeCard(event) {
-    event.stopPropagation(); // Prevent bubbling to the container
-    event.target.parentElement.remove(); // Remove the clicked card
+    event.stopPropagation(); 
+    event.target.parentElement.remove(); 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
