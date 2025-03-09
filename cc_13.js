@@ -1,3 +1,5 @@
+//Task 1 Creating a base structure
+
 
 //Task 2 - Employee Cards Dynamic Addition
 function createEmployeeCard(name, position) {
