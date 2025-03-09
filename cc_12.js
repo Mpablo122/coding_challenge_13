@@ -29,10 +29,12 @@ function createEmployeeCard(name, position) {
     card.appendChild(buttonContainer);
     container.appendChild(card);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
 createEmployeeCard("Benny", "Tester");
 createEmployeeCard("Jimmy", "Diagnostics");
 createEmployeeCard("Ryan", "Manager");
-
+})
 //Task 3 
 
 function updateEmployeeCards() {
